@@ -1,0 +1,545 @@
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header>a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 6em;
+    line-height: 1em;
+}
+
+/***Navigation***/
+
+#mainNav {
+    position: fixed;
+    top: 0;
+    right: 10px;
+}
+
+#mainNav li {
+    display: inline;
+    margin: 0 0 0 20px;
+}
+
+
+#nav-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+#mainNav a {
+    color: #ea00ff;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: 0.7s;
+    position: relative;
+}
+
+#mainNav .active {
+    font-weight: 600;
+}
+
+#mainNav a:before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    bottom: -2px;
+    background-color: #ea00ff;
+    transform: scaleZ(-1);
+    transition: 0.7s ease-in-out 0s;
+}
+
+#mainNav a:hover:before {
+    width: 100%;
+}
+
+/* Hamburger Icon */
+#hamburgerIcon {
+    position: fixed;
+    top: 0;
+    padding-top: 20px;
+    padding-left: 20px;
+    display: none;
+    /* Das Icon wird nicht angezeigt */
+    font-size: 3em;
+    cursor: pointer;
+    color: #ea00ff;
+}
+
+/* Hamburger Navigation */
+#hamburgerNav {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    padding-top: 110px;
+    overflow: hidden;
+    transition: 0.5s;
+    background-color: white;
+    z-index: 10;
+}
+
+#hamburgerNav .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 60px;
+}
+
+#hamburgerNav a {
+    display: block;
+    text-decoration: none;
+    font-size: 36px;
+    color: black;
+    transition: 0.3s;
+}
+
+#hamburgerNav a:hover {
+    color: #ea00ff;
+}
+
+/***main***/
+main {
+    margin: 150px;
+}
+
+.hero {
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+}
+
+h1 {
+    z-index: 2;
+    font-size: 90px;
+    color: transparent;
+    -webkit-text-stroke: 1px #ea00ff;
+    background: url(back2.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+
+@keyframes back {
+    100% {
+        background-position: 2000px 0px;
+    }
+}
+
+/***Button***/
+.button a {
+    color: #ea00ff;
+    padding: 36px;
+}
+
+.button {
+    width: 140px;
+    height: 60px;
+    border: 1px solid #ea00ff;
+    color: #ea00ff;
+    margin: auto;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.button p {
+    font-size: 20px;
+    font-weight: bold;
+    transition: .1s;
+}
+
+span {
+    width: 80px;
+    height: 80px;
+    top: 80px;
+    position: absolute;
+    background: #ea00ff;
+    border-radius: 50%;
+    z-index: -1;
+    transition: 1s;
+}
+
+span:nth-child(1) {
+    left: -20px;
+    transition-delay: .1s;
+}
+
+span:nth-child(2) {
+    left: 30px;
+    transition-delay: .2s;
+}
+
+span:nth-child(3) {
+    left: 80px;
+    transition-delay: .4s;
+}
+
+span:nth-child(4) {
+    left: 125px;
+    transition-delay: .6s;
+}
+
+.button:hover span {
+    top: -10px;
+}
+
+.button:hover p {
+    color: #000;
+    transition-delay: .4s;
+}
+
+/****footer***/
+
+.button2 a {
+    color: #ea00ff;
+    padding: 36px;
+}
+
+.button2 {
+    width: 140px;
+    height: 40px;
+    border: 1px solid #ea00ff;
+    color: #ea00ff;
+    margin: auto;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.button2 p {
+    font-size: 20px;
+    font-weight: bold;
+    transition: .1s;
+    padding-right: 20px;
+
+}
+
+.button2:hover span {
+    top: -10px;
+}
+
+.button2:hover p {
+    color: #000;
+    transition-delay: .4s;
+}
+
+
+.footer {
+    color: #ea00ff;
+    position: center;
+    padding-left: 2%;
+}
+
+a {
+    color: #ea00ff;
+    text-decoration: none;
+}
+
+i {
+    display: inline-block;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .1s;
+    text-align: center;
+    margin-left: 23px;
+}
+
+.button:hover i {
+    color: #000;
+    transition-delay: .4s;
+}
+
+p {
+    display: inline-block;
+}
+
+
+
+/***Container***/
+
+.boxen {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.block1,
+.block2,
+.block3,
+.block4,
+.block5,
+.block6,
+.block7,
+.block8,
+.block9,
+.block10,
+.block11,
+.block12,
+.block13,
+.block14,
+.block15,
+.block16,
+.block17,
+.block17,
+.block18,
+.block19,
+.block20,
+.block21,
+.block22,
+.block23,
+.block24,
+.block25 {
+    background-color: white;
+    width: 420px;
+    height: 594px;
+    margin: 100px 0px;
+    border: 2px solid #ea00ff;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.block1 {
+    opacity: 1;
+}
+
+.block1:hover,
+.block2:hover,
+.block3:hover,
+.block4:hover,
+.block5:hover,
+.block6:hover,
+.block7:hover,
+.block8:hover,
+.block9:hover,
+.block10:hover,
+.block11:hover,
+.block12:hover,
+.block13:hover,
+.block14:hover,
+.block15:hover,
+.block16:hover,
+.block17:hover,
+.block18:hover,
+.block19:hover,
+.block20:hover,
+.block21:hover,
+.block22:hover,
+.block23:hover,
+.block24:hover,
+.block25:hover {
+    opacity: 0.8;
+}
+
+
+.block1 {
+    opacity: 1;
+    background-image: url(./inhalt/SECURA_Logo_Bildmarke.jpg);
+    height: 594px;
+}
+
+.block2 {
+    opacity: 1;
+    background-image: url(./inhalt/M-D_Meilenstein.jpg);
+}
+
+.block3 {
+    opacity: 1;
+    background-image: url(./inhalt/M-D_TippsTricks/1.jpg);
+}
+
+.block4 {
+    opacity: 1;
+    background-image: url(./inhalt/M-D_Powerpoint\ -\ Kopie.png);
+}
+
+.block5 {
+    opacity: 1;
+    background-image: url(./inhalt/Datenvisualisierung_borges2.png);
+}
+
+.block6 {
+    opacity: 1;
+    background-image: url(./inhalt/M-D_Arbeitsjournal-1.png);
+}
+
+
+.block7 {
+    opacity: 1;
+    background-image: url(./inhalt/G-I_Medienkompetenz-4.png);
+}
+
+.block8 {
+    opacity: 1;
+    background-image: url(./inhalt/G-I_farbkomposition-2.png);
+}
+
+.block9 {
+    opacity: 1;
+    background-image: url(./inhalt/Fontimage.jpg);
+
+}
+
+.block10 {
+    opacity: 1;
+    background-image: url(./inhalt/G-I_GUI-3.png);
+
+}
+
+
+.block11 {
+    opacity: 1;
+    background-image: url(./inhalt/Dryer_Borges2.png);
+
+}
+
+.block12 {
+    opacity: 1;
+    background-image: url(./inhalt/Christmas_ornaments2.jpg);
+
+}
+
+
+.block13 {
+    opacity: 1;
+    background-image: url(./inhalt/SK_cow2.png);
+}
+
+.block14 {
+    opacity: 1;
+    background-image: url(./inhalt/SK_eagle2.png);
+}
+
+.block15 {
+    opacity: 1;
+    background-image: url(./inhalt/SK_face2.png);
+}
+
+.block16 {
+    opacity: 1;
+    background-image: url(./inhalt/SK_headgehog2.png);
+}
+
+.block17 {
+    opacity: 1;
+    background-image: url(./inhalt/SK_house2.png);
+}
+
+.block18 {
+    opacity: 1;
+    background-image: url(./inhalt/SK_papierboot2.png);
+}
+
+
+.block19 {
+    opacity: 1;
+    background-image: url(./inhalt/SK_daten2.png);
+
+}
+
+.block20 {
+    opacity: 1;
+    background-image: url(./inhalt/frei/Factsheet_CMS-1.png);
+}
+
+.block21 {
+    opacity: 1;
+    background-image: url(./inhalt/frei/Frei_whale2.png);
+}
+
+.block22 {
+    opacity: 1;
+    background-image: url(./inhalt/frei/iceberg2.png);
+}
+
+.block23 {
+    opacity: 1;
+    background-image: url(./inhalt/frei/sabrina2.png);
+}
+
+.block24 {
+    opacity: 1;
+    background-image: url(./inhalt/frei/Space_arts2-42.png);
+}
+
+.block25 {
+    opacity: 1;
+    background-image: url(./inhalt/frei/Factsheet_CMS-1.png);
+
+}
+
+
+/***title***/
+
+h3 {
+    font-size: 80px;
+    color: transparent;
+    -webkit-text-stroke: 1px #ea00ff;
+    background: url(back2.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+    text-align: center;
+    padding-top: 100px;
+    margin-top: 100vh;
+}
+
+h2 {
+    font-size: 80px;
+    color: transparent;
+    -webkit-text-stroke: 1px #ea00ff;
+    background: url(back2.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+    text-align: center;
+    padding-top: 100px;
+    margin-top: 200px;
+}
+
+.titlesmall {
+    font-size: 80px;
+    color: transparent;
+    -webkit-text-stroke: 1px #ea00ff;
+    background: url(back2.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+    text-align: center;
+    margin-top: 10vh;
+    padding-top: 100px;
+}
+
+/* CSS Regeln verändern sich, wenn der Bilschirm kleiner als 700px in der Breite ist: 
+   Die Main-Navigation wird ausgeblendet und das Hamburger-Icon eingeblendet. */
+@media screen and (max-width: 700px) {
+    #mainNav {
+        display: none;
+        z-index: 1;
+    }
+
+    #hamburgerIcon {
+        display: block;
+    }
+}
